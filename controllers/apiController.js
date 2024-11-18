@@ -23,7 +23,7 @@ export const createUser = (req, res) => {
   const { id, name } = req.body;
 
   if (!id || !name) {
-    res.status(400).json({ message: "Please provide id and name" });
+    return res.status(400).json({ message: "Please provide id and name" });
   }
 
   const newUser = { id, name };
